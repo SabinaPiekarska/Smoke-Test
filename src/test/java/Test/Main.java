@@ -7,8 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.awt.*;
-
 public class Main {
 
     public static WebDriver driver;
@@ -21,8 +19,13 @@ public class Main {
         Logon logonpage = new Logon();
 
         Driver driver = new Driver();
+        AccessToTheFullAdminMenu fulladmmenu = new AccessToTheFullAdminMenu();
+
         driver.openTestingPage();
         driver.waitUntilPageLoads(By.id("Login_UserName"));
         logonpage.Logon();
+        driver.waitUntilPageLoads(By.xpath("/html/body/form/div[3]/table/tbody/tr[1]/td/div/table/tbody/tr/td[2]/div/span"));
+        fulladmmenu.getAdminMenu();
+        fulladmmenu.SystemManagement();
     }
 }
