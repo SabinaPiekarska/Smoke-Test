@@ -8,7 +8,7 @@ public class AccessToTheFullAdminMenu extends Driver {
 
     public void getAdminMenu () {
         mapping.getAdministration().click();
-        mapping.getFullAdministrationMenu().click();
+        mapping.getFullAdministrationMenu().click();,p
     }
 
 
