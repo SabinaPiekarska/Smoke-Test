@@ -25,4 +25,16 @@ public class TheLibraryView extends Driver{
     public WebElement getSchemaList(){
         return driver.findElement(By.id("ctl00_ctl00_c_c_CabinetWizard1_Wizard_SchemasList"));
     }
+    public WebElement getNextButton(){
+        return driver.findElement(By.id("ctl00_ctl00_c_c_CabinetWizard1_Wizard_StartNavigationTemplateContainerID_StartNextButton"));
+    }
+    public WebElement getAddGroups(){
+        return driver.findElement(By.id("ctl00_ctl00_c_c_CabinetWizard1_Wizard_ManageMembershipControl_AddGroupsButton"));
+    }
+    public WebElement getSaveButton(){
+        return driver.findElement(By.id("ctl00_ctl00_c_c_CabinetWizard1_Wizard_StepNavigationTemplateContainerID_StartFinishButton"));
+    }
+    public WebElement getCurrentMembersOfCabinet(){
+        return driver.findElement(By.id("ctl00_ctl00_c_c_CabinetWizard1_Wizard_ManageMembershipControl_CurrentMembersListBox"));
+    }
 }

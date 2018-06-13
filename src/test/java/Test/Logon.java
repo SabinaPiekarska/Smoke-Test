@@ -26,5 +26,17 @@ public class Logon extends Driver {
     mapping.getCabinetName().sendKeys("Test sysadm");
     mapping.getSchemaList().click();
     randomDropdownClick(mapping.getSchemaList());
+    mapping.getNextButton().click();
+    waitUntilPageLoads(By.id("ctl00_ctl00_c_c_CabinetWizard1_Wizard_ManageMembershipControl_AddGroupsButton"));
+    mapping.getAddGroups().click();
+     if(!(mapping.getCurrentMembersOfCabinet().getAttribute("value")==null)){
+
+         mapping.getSaveButton().click();
+     }
+     else
+         waitUntilPageLoads(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr[1]/td/div/table/tbody/tr/td/table/tbody/tr[2]/td[3]/div[1]/select/option[1]"));
+
+        /*((JavascriptExecutor)driver).executeScript("javascript:setTimeout('__doPostBack(\'ctl00$ctl00$c$c$CabinetWizard1$Wizard$ManageMembershipControl$CurrentMembersListBox\',\'\')', 0)");*/
+        driver.quit();
 }
 }
