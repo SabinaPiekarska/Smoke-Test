@@ -3,8 +3,14 @@ package BrowserFunctions;
 import Test.Main;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class Driver {
     public WebDriver driver;
@@ -17,6 +23,7 @@ public class Driver {
     //     Method that waits till specified element will be visible and enable to click
     public void waitUntilPageLoads(By load) throws InterruptedException{
         WebDriverWait wait = new WebDriverWait(driver, 60);
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         wait.until(ExpectedConditions.elementToBeClickable(load));
     }
 
@@ -25,4 +32,13 @@ public class Driver {
         driver.get(basicURL);
     }
 
+    public void randomClick(List<WebElement> options) {
+        Random random = new Random();
+        int index = random.nextInt(options.size());
+        options.get(index).click();
+    }
+    public void randomDropdownClick(WebElement element) {
+    Select select = new Select(element);
+    List<WebElement> elements = select.getOptions();
+    randomClick(elements);}
 }

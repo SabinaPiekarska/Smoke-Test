@@ -12,4 +12,17 @@ public class TheLibraryView extends Driver{
     public WebElement getFullAdministrationMenu () {
         return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[1]/td/div/table/tbody/tr/td[2]/div/ul/li[1]/a"));
     }
+    public WebElement getLibraryTree(){
+        return driver.findElement(By.id("myNodePanel_LIB"));
+    }
+    public WebElement getAddCabinet(){
+        return driver.findElement(By.xpath("/html/body/form/div[1]/ul/li[5]"));
+    }
+    //Add Cabinet fields
+    public WebElement getCabinetName() {
+        return driver.findElement(By.id("ctl00_ctl00_c_c_CabinetWizard1_Wizard_CabinetNameTextBox"));
+    }
+    public WebElement getSchemaList(){
+        return driver.findElement(By.id("ctl00_ctl00_c_c_CabinetWizard1_Wizard_SchemasList"));
+    }
 }
