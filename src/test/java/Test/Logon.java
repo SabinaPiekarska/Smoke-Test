@@ -14,6 +14,6 @@ public class Logon extends Driver {
         logonpage.getLogon().sendKeys(user.getSysadm());
         logonpage.getPassword().sendKeys(user.getPassword());
         logonpage.getLogonButton().click();
-        quitDriver();
+
 }
 }

@@ -31,6 +31,7 @@ public class Driver {
     public void openTestingPage (){
         driver.get(basicURL);
     }
+
     public void quitDriver() {
         driver.quit();
     }

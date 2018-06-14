@@ -2,6 +2,8 @@ package Test;
 
 
 import BrowserFunctions.Driver;
+import Test.Library.CreateCabinet;
+import com.sun.rowset.internal.CachedRowSetReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,6 +19,7 @@ public class Main {
         System.setProperty("webdriver.gecko.driver", "C:\\\\geckodriver.exe");
         driver = new FirefoxDriver(capabilities);
         Logon logonpage = new Logon();
+        CreateCabinet cabcreate = new CreateCabinet();
 
         Driver driver = new Driver();
         AccessToTheFullAdminMenu fulladmmenu = new AccessToTheFullAdminMenu();
@@ -24,6 +27,8 @@ public class Main {
         driver.openTestingPage();
         driver.waitUntilPageLoads(By.id("Login_UserName"));
         logonpage.Logon();
+        cabcreate.createACabinet();
+
       /*  driver.waitUntilPageLoads(By.xpath("/html/body/form/div[3]/table/tbody/tr[1]/td/div/table/tbody/tr/td[2]/div/span"));
         fulladmmenu.getAdminMenu();
         fulladmmenu.SystemManagement();*/
