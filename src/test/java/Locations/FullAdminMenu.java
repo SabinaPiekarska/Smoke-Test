@@ -10,7 +10,10 @@ public class FullAdminMenu extends Driver {
     Actions action = new Actions(driver);
 
     public void getFullAdminMenu () {
+/*
         action.contextClick(mapping.getAdministration()).perform();
+*/
+        action.moveToElement(mapping.getAdministration()).click().build().perform();
         mapping.getFullAdministrationMenu().click();
     }
 
