@@ -7,13 +7,12 @@ import Mapping.LogonPage;
 
 public class Logon extends Driver {
 
-    public void Logon() {
     LogonPage logonpage = new LogonPage();
     Users user = new Users();
 
+    public void Logon() {
         logonpage.getLogon().sendKeys(user.getSysadm());
         logonpage.getPassword().sendKeys(user.getPassword());
         logonpage.getLogonButton().click();
-
 }
 }
