@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
 
+
 public class CreateCabinet extends Driver {
 
     public void createACabinet() throws InterruptedException {

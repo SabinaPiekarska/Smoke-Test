@@ -2,8 +2,9 @@ package Test;
 
 
 import BrowserFunctions.Driver;
+import Locations.FullAdminMenu;
 import Test.Library.CreateCabinet;
-import com.sun.rowset.internal.CachedRowSetReader;
+import Test.UsersAndGroups.PasswordReset;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -20,15 +21,17 @@ public class Main {
         driver = new FirefoxDriver(capabilities);
         Logon logonpage = new Logon();
         CreateCabinet cabcreate = new CreateCabinet();
+        PasswordReset passrester = new PasswordReset();
 
         Driver driver = new Driver();
-        AccessToTheFullAdminMenu fulladmmenu = new AccessToTheFullAdminMenu();
+        FullAdminMenu fulladmmenu = new FullAdminMenu();
 
         driver.openTestingPage();
         driver.waitUntilPageLoads(By.id("Login_UserName"));
-        logonpage.Logon();
+        passrester.passwordReset();
+        /*logonpage.Logon();
         cabcreate.createACabinet();
-
+*/
       /*  driver.waitUntilPageLoads(By.xpath("/html/body/form/div[3]/table/tbody/tr[1]/td/div/table/tbody/tr/td[2]/div/span"));
         fulladmmenu.getAdminMenu();
         fulladmmenu.SystemManagement();*/
