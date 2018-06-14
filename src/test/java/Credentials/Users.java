@@ -1,4 +1,4 @@
-package Users;
+package Credentials;
 
 public class Users {
     private String sysadm = "sysadm";
