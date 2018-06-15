@@ -13,7 +13,7 @@ public class FullAdministrationMenu extends Driver {
         return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div/table/tbody/tr/td[1]/div/ul/li[4]/div/ul/li[1]/div/ul/li[1]/a/span/span[2]"));
     }
     public WebElement getUsers(){
-        return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div/table/tbody/tr/td[1]/div/ul/li[4]/div/ul/li[1]/div/ul/li[1]/a/span/span[2]"));
+        return driver.findElement(By.partialLinkText("UsersForm"));
     }
 
 }

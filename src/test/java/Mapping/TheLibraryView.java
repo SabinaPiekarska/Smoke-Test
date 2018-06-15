@@ -40,4 +40,39 @@ public class TheLibraryView extends Driver{
     public WebElement getCurrentMembersOfCabinet(){
         return driver.findElement(By.id("ctl00_ctl00_c_c_CabinetWizard1_Wizard_ManageMembershipControl_CurrentMembersListBox"));
     }
+
+    //Search
+    public WebElement getSearchFromSideMenu(){
+        return driver.findElement(By.id("ctl00_ctl00_c_LibraryTree_lstt12"));
+    }
+    public WebElement getSearchBar(){
+        return driver.findElement(By.id("ctl00_ctl00_c_c_SearchBar_FTSSearchTextBox"));
+    }
+    public WebElement getSearchButton(){
+        return driver.findElement(By.id("ctl00_ctl00_c_c_SearchBar_SearchButton"));
+    }
+    public WebElement getAdvancedLink(){
+        return driver.findElement(By.id("ctl00_ctl00_c_c_SearchBar_AdvancedLink"));
+    }
+    public WebElement getAdvancedSearchBar(){
+        return driver.findElement(By.id("ctl00_ctl00_c_c_SearchBar_DataList_ctl00_ctrl_0_SAoF_cont_Text"));
+    }
+    public WebElement getFileOrMetadata(){
+        return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/div[1]/div[1]/div/table[2]/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td[1]/div[1]/ul/li/a"));
+    }
+    public WebElement getCheckOutStatus(){
+        return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/div[1]/div[1]/div/table[2]/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td[1]/div[1]/ul/li/ul/li[3]/a"));
+    }
+    public WebElement getDrpDownMenuArrow(){
+        return driver.findElement(By.id("ctl00_ctl00_c_c_SearchBar_DataList_ctl00_ctrl_0_COS_eq_SDDM_Arrow"));
+    }
+    public WebElement getCheckIn(){
+        return driver.findElement(By.xpath("/html/body/form/div[1]/div/div/ul/li[2]"));
+    }
+    public WebElement getAdvancedSearchButton(){
+        return driver.findElement(By.id("ctl00_ctl00_c_c_SearchBar_SearchAdvButton"));
+    }
+    public WebElement getLogoffButton(){
+        return driver.findElement(By.id("ctl00_ctl00_LogOutButton"));
+    }
 }

@@ -23,7 +23,7 @@ public class Driver {
     //     Method that waits till specified element will be visible and enable to click
     public void waitUntilPageLoads(By load) throws InterruptedException{
         WebDriverWait wait = new WebDriverWait(driver, 60);
-        /*driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);*/
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         wait.until(ExpectedConditions.elementToBeClickable(load));
     }
 
@@ -35,4 +35,5 @@ public class Driver {
     public void quitDriver() {
         driver.quit();
     }
+
 }
