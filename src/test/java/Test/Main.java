@@ -34,27 +34,22 @@ public class Main {
         Search search = new Search();
         AdvancedSearch advancedSearch = new AdvancedSearch();
         SearchQueries query = new SearchQueries();
+        SimpleSearch simpleSearch = new SimpleSearch();
 
         driver.openTestingPage();
         driver.waitUntilPageLoads(By.id("Login_UserName"));
+        simpleSearch.execute();
+
         /*passrester.passwordReset();*/
-        logonpage.Logon(user.getSysadm());
+//        logonpage.Logon(user.getSysadm());
 //        advancedSearch.advancedSearch();
 //        logonpage.logoff();
 
 //        driver.waitUntilPageLoads(By.id("Login_UserName"));
 //        logonpage.Logon(user.getUser04());
 //        advancedSearch.advancedSearch();
-        search.search();
-        search.simpleSearch(query.getAndOperator());
-        search.simpleSearch(query.getNotOperator());
-        search.simpleSearch(query.getOrOperator());
-        search.simpleSearch(query.getEqualOperator());
-        search.simpleSearch(query.getAndNotOperator());
-        search.simpleSearch(query.getNoiseWordsOperator());
-        search.simpleSearch(query.getQuestionMarkOperator());
-        search.simpleSearch(query.getwAndAsteriskOperator());
-        search.simpleSearch(query.getAmpersandOperator());
+//        search.search();
+
 
 
 //        cabcreate.createACabinet();

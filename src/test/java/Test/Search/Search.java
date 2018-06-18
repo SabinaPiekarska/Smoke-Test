@@ -10,7 +10,7 @@ public class Search extends Driver {
     SearchQueries query = new SearchQueries();
 
     public void search() throws InterruptedException {
-        waitUntilPageLoads(By.id("ctl00_ctl00_c_LibraryTree_lstt25"));
+        waitUntilPageLoads(By.id("ctl00_ctl00_c_LibraryTree_lstt0"));
         mapping.getSearchFromSideMenu().click();
         waitUntilPageLoads(By.id("ctl00_ctl00_c_c_SearchBar_FTSSearchTextBox"));
     }
@@ -23,7 +23,7 @@ public class Search extends Driver {
         waitUntilPageLoads(By.id("ctl00_ctl00_c_c_MainPanel"));
         String result = mapping.getSearchResults().getText();
         if (result.equalsIgnoreCase("No Search Results"))
-            System.out.println("no results");
+            System.out.println("no results ");
         else
             System.out.println("search results");
 

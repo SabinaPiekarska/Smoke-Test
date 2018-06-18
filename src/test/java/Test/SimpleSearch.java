@@ -13,7 +13,18 @@ public class SimpleSearch {
         search.searchOperator();
         log.logoff();
     }
-    public void execute() {
-        simpleSearch(usersname.getUser00);
+    public void execute() throws InterruptedException {
+//        simpleSearch(usersname.getUser00());
+//        simpleSearch(usersname.getUser01());
+        simpleSearch(usersname.getUser02());
+        simpleSearch(usersname.getUser03());
+        simpleSearch(usersname.getUser04());
+        simpleSearch(usersname.getUser05());
+        simpleSearch(usersname.getUser06());
+        simpleSearch(usersname.getUser07());
+        simpleSearch(usersname.getUser08());
+        simpleSearch(usersname.getUser09());
+        simpleSearch(usersname.getUser10());
+        simpleSearch(usersname.getSysadm());
     }
 }
