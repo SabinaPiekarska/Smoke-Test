@@ -81,9 +81,9 @@ public class TheLibraryView extends Driver{
     public WebElement getOwnedByMe (){
         return driver.findElement(By.xpath("/html/body/form/div[4]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/div[1]/div[1]/div/table[2]/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td[1]/div[1]/ul/li/ul/li[3]/ul/li[1]/a"));
     }
-//    public WebElement get (){
-//        return driver.findElement(By.id(""));
-//    }
+    public WebElement getSearchResults (){
+        return driver.findElement(By.id("ctl00_ctl00_c_c_SearchResultsLabel"));
+    }
 //    public WebElement get (){
 //        return driver.findElement(By.id(""));
 //    }

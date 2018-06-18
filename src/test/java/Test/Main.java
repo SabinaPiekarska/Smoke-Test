@@ -36,13 +36,14 @@ public class Main {
         driver.waitUntilPageLoads(By.id("Login_UserName"));
         /*passrester.passwordReset();*/
         logonpage.Logon(user.getSysadm());
-        advancedSearch.advancedSearch();
-        logonpage.logoff();
+//        advancedSearch.advancedSearch();
+//        logonpage.logoff();
 
-        driver.waitUntilPageLoads(By.id("Login_UserName"));
-        logonpage.Logon(user.getUser04());
-        advancedSearch.advancedSearch();
-//        search.search();
+//        driver.waitUntilPageLoads(By.id("Login_UserName"));
+//        logonpage.Logon(user.getUser04());
+//        advancedSearch.advancedSearch();
+        search.search();
+        search.simpleSearch();
 //        cabcreate.createACabinet();
       /*  driver.waitUntilPageLoads(By.xpath("/html/body/form/div[3]/table/tbody/tr[1]/td/div/table/tbody/tr/td[2]/div/span"));
         fulladmmenu.getAdminMenu();
