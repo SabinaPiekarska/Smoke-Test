@@ -2,8 +2,10 @@ package Test;
 
 
 import BrowserFunctions.Driver;
+import Credentials.SearchQueries;
 import Credentials.Users;
 import Locations.FullAdminMenu;
+import Mapping.TheLibraryView;
 import Test.Library.CreateCabinet;
 import Test.Search.AdvancedSearch;
 import Test.Search.Search;
@@ -31,6 +33,7 @@ public class Main {
         FullAdminMenu fulladmmenu = new FullAdminMenu();
         Search search = new Search();
         AdvancedSearch advancedSearch = new AdvancedSearch();
+        SearchQueries query = new SearchQueries();
 
         driver.openTestingPage();
         driver.waitUntilPageLoads(By.id("Login_UserName"));
@@ -43,7 +46,17 @@ public class Main {
 //        logonpage.Logon(user.getUser04());
 //        advancedSearch.advancedSearch();
         search.search();
-        search.simpleSearch();
+        search.simpleSearch(query.getAndOperator());
+        search.simpleSearch(query.getNotOperator());
+        search.simpleSearch(query.getOrOperator());
+        search.simpleSearch(query.getEqualOperator());
+        search.simpleSearch(query.getAndNotOperator());
+        search.simpleSearch(query.getNoiseWordsOperator());
+        search.simpleSearch(query.getQuestionMarkOperator());
+        search.simpleSearch(query.getwAndAsteriskOperator());
+        search.simpleSearch(query.getAmpersandOperator());
+
+
 //        cabcreate.createACabinet();
       /*  driver.waitUntilPageLoads(By.xpath("/html/body/form/div[3]/table/tbody/tr[1]/td/div/table/tbody/tr/td[2]/div/span"));
         fulladmmenu.getAdminMenu();
