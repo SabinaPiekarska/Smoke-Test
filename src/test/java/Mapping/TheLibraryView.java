@@ -69,29 +69,29 @@ public class TheLibraryView extends Driver{
     public WebElement getCheckIn(){
         return driver.findElement(By.xpath("//ul[@class='rcbList']//child::li[2]"));
     }
+    public WebElement getCheckOut (){
+        return driver.findElement(By.xpath("//ul[@class='rcbList']//child::li[2]"));
+    }
     public WebElement getAdvancedSearchButton(){
         return driver.findElement(By.id("ctl00_ctl00_c_c_SearchBar_SearchAdvButton"));
     }
-    public WebElement getCheckOut (){
-        return driver.findElement(By.xpath("/html/body/form/div[1]/div/div/ul/li[3]"));
-    }
-    public WebElement Person (){
-        return driver.findElement(By.xpath("/html/body/form/div[4]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/div[1]/div[1]/div/table[2]/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td[1]/div[1]/ul/li/ul/li[3]/a"));
+    public WebElement getPerson (){
+        return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='Person']"));
     }
     public WebElement getOwnedByMe (){
-        return driver.findElement(By.xpath("/html/body/form/div[4]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/div[1]/div[1]/div/table[2]/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td[1]/div[1]/ul/li/ul/li[3]/ul/li[1]/a"));
+        return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='Owned by Me']"));
     }
     public WebElement getSearchResults (){
         return driver.findElement(By.id("ctl00_ctl00_c_c_SearchResultsLabel"));
     }
     public WebElement getFileDate (){
-        return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/div[1]/div[1]/div/table[2]/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td[1]/div[1]/ul/li/ul/li[5]/a"));
+        return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='File Date']"));
     }
     public WebElement getWorkflowStatus (){
-        return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/div[1]/div[1]/div/table[2]/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td[1]/div[1]/ul/li/ul/li[6]/a"));
+        return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='Workflow Status']"));
     }
     public WebElement getLibraryLocation (){
-        return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/div[1]/div[1]/div/table[2]/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td[1]/div[1]/ul/li/ul/li[6]/a"));
+        return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='Library Location']"));
     }
 //    public WebElement get (){
 //        return driver.findElement(By.id(""));
