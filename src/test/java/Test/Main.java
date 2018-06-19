@@ -38,11 +38,11 @@ public class Main {
 
         driver.openTestingPage();
         driver.waitUntilPageLoads(By.id("Login_UserName"));
-        simpleSearch.execute();
+//        simpleSearch.execute();
 
         /*passrester.passwordReset();*/
-//        logonpage.Logon(user.getSysadm());
-//        advancedSearch.advancedSearch();
+        logonpage.Logon(user.getSysadm());
+        advancedSearch.advancedSearch();
 //        logonpage.logoff();
 
 //        driver.waitUntilPageLoads(By.id("Login_UserName"));

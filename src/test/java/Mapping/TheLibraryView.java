@@ -58,16 +58,16 @@ public class TheLibraryView extends Driver{
         return driver.findElement(By.id("ctl00_ctl00_c_c_SearchBar_DataList_ctl00_ctrl_0_SAoF_cont_Text"));
     }
     public WebElement getFileOrMetadata(){
-        return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/div[1]/div[1]/div/table[2]/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td[1]/div[1]/ul/li/a"));
+        return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='File or Metadata']"));
     }
     public WebElement getCheckOutStatus(){
-        return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/div[1]/div[1]/div/table[2]/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td[1]/div[1]/ul/li/ul/li[3]/a"));
+        return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='Checked Out Status']"));
     }
     public WebElement getDrpDownMenuArrow(){
         return driver.findElement(By.id("ctl00_ctl00_c_c_SearchBar_DataList_ctl00_ctrl_0_COS_eq_SDDM_Arrow"));
     }
     public WebElement getCheckIn(){
-        return driver.findElement(By.xpath("/html/body/form/div[1]/div/div/ul/li[2]"));
+        return driver.findElement(By.xpath("//ul[@class='rcbList']//child::li[2]"));
     }
     public WebElement getAdvancedSearchButton(){
         return driver.findElement(By.id("ctl00_ctl00_c_c_SearchBar_SearchAdvButton"));
