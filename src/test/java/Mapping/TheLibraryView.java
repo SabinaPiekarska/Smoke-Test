@@ -132,17 +132,36 @@ public class TheLibraryView extends Driver{
     public WebElement getSpecialFields (){
         return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='Document Log']"));
     }
-
-
-//    public WebElement get (){
-//        return driver.findElement(By.id(""));
-//    }
-//    public WebElement get (){
-//        return driver.findElement(By.id(""));
-//    }
-//    public WebElement get (){
-//        return driver.findElement(By.id(""));
-//    }
+    public WebElement getFolderName (){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:27']//a[text()='Folder Name']"));
+    }
+    public WebElement getFileSize (){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:27']//a[text()='File Size']"));
+        }
+    public WebElement getFileType (){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:27']//a[text()='File Type']"));
+        }
+    public WebElement getHasMarkup (){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:27']//a[text()='Has Markup']"));
+        }
+    public WebElement getHasLink (){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:27']//a[text()='Has Link']"));
+        }
+    public WebElement getIsFavorite (){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:27']//a[text()='Is Favorite']"));
+        }
+    public WebElement getFileholdID (){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:27']//a[text()='FileHold ID']"));
+        }
+    public WebElement getDocumentControlNo (){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:27']//a[text()='Document Control No.']"));
+        }
+    public WebElement getVersionControlNo (){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:27']//a[text()='Version Control No.']"));
+        }
+    public WebElement getDocumentFormat (){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:27']//a[text()='Document Format']"));
+                }
 
 
     public WebElement getLogoffButton(){
