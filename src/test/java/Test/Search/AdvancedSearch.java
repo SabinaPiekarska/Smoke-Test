@@ -26,16 +26,16 @@ public class AdvancedSearch extends Driver {
 //        action.moveToElement(mapping.getCheckIn());
 //        action.click().build().perform();
 
-        action.moveToElement(mapping.getFileDate());
-        action.click().build().perform();
-        action.moveToElement(mapping.getLibraryLocation());
-        action.click().build().perform();
-        action.moveToElement(mapping.getOwnedByMe());
-        action.click().build().perform();
-        action.moveToElement(mapping.getWorkflowStatus());
-        action.click().build().perform();
-        action.moveToElement(mapping.getPerson());
-        action.click().build().perform();
+//        action.moveToElement(mapping.getFileDate());
+//        action.click().build().perform();
+//        action.moveToElement(mapping.getLibraryLocation());
+//        action.click().build().perform();
+//        action.moveToElement(mapping.getOwnedByMe());
+//        action.click().build().perform();
+//        action.moveToElement(mapping.getWorkflowStatus());
+//        action.click().build().perform();
+
+
 //        mapping.getAdvancedSearchButton().click();
     }
 }

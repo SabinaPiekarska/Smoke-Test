@@ -70,7 +70,7 @@ public class TheLibraryView extends Driver{
         return driver.findElement(By.xpath("//ul[@class='rcbList']//child::li[2]"));
     }
     public WebElement getCheckOut (){
-        return driver.findElement(By.xpath("//ul[@class='rcbList']//child::li[2]"));
+        return driver.findElement(By.xpath("//ul[@class='rcbList']//child::li[3]"));
     }
     public WebElement getAdvancedSearchButton(){
         return driver.findElement(By.id("ctl00_ctl00_c_c_SearchBar_SearchAdvButton"));
@@ -79,7 +79,16 @@ public class TheLibraryView extends Driver{
         return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='Person']"));
     }
     public WebElement getOwnedByMe (){
-        return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='Owned by Me']"));
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:6']//a[text()='Owned by Me']"));
+    }
+    public WebElement getOwnedBySomeoneElse(){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:6']//a[text()='Owned by Someone Else']"));
+    }
+    public WebElement getCheckOutByMe(){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:6']//a[text()='Checked Out By Me']"));
+    }
+    public WebElement getCheckOutBySomeoneElse(){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:6']//a[text()='Checked Out By Someone Else']"));
     }
     public WebElement getSearchResults (){
         return driver.findElement(By.id("ctl00_ctl00_c_c_SearchResultsLabel"));
