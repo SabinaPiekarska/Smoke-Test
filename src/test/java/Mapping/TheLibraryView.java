@@ -75,6 +75,7 @@ public class TheLibraryView extends Driver{
     public WebElement getAdvancedSearchButton(){
         return driver.findElement(By.id("ctl00_ctl00_c_c_SearchBar_SearchAdvButton"));
     }
+    //Search by 'Person'
     public WebElement getPerson (){
         return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='Person']"));
     }
@@ -93,15 +94,46 @@ public class TheLibraryView extends Driver{
     public WebElement getSearchResults (){
         return driver.findElement(By.id("ctl00_ctl00_c_c_SearchResultsLabel"));
     }
+    //Search by 'File Date'
     public WebElement getFileDate (){
         return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='File Date']"));
     }
+    public WebElement getDateLastModified (){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:12']//a[text()='Date Last Modified']"));
+    }
+    public WebElement getCreationDate (){
+            return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:12']//a[text()='Creation Date']"));
+        }
+    public WebElement getApprovalDate (){
+            return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:12']//a[text()='Approval Date']"));
+        }
+    public WebElement getReviewDate (){
+            return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:12']//a[text()='Review Date']"));
+        }
+    //Search by 'Workflow Status'
     public WebElement getWorkflowStatus (){
         return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='Workflow Status']"));
     }
+    public WebElement getApprovalStatus (){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:18']//a[text()='Approval Status']"));
+    }
+    public WebElement getReviewstatus (){
+        return driver.findElement(By.xpath("//ul[@id='ctl00_ctl00_c_c_SearchBar_DataList_ctl00_FieldsMenu:submenu:18']//a[text()='Review Status']"));
+    }
+    //Search by 'Library Location'
     public WebElement getLibraryLocation (){
         return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='Library Location']"));
     }
+    //Search by 'Document Log'
+    public WebElement getDocumentLog (){
+        return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='Document Log']"));
+    }
+    //Search by 'Special Fields'
+    public WebElement getSpecialFields (){
+        return driver.findElement(By.xpath("//table[@id='ctl00_ctl00_c_c_SearchBar_DataList']//a[text()='Document Log']"));
+    }
+
+
 //    public WebElement get (){
 //        return driver.findElement(By.id(""));
 //    }
