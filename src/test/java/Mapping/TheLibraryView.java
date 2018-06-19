@@ -43,7 +43,7 @@ public class TheLibraryView extends Driver{
 
     //Search
     public WebElement getSearchFromSideMenu(){
-        return driver.findElement(By.id("ctl00_ctl00_c_LibraryTree_lstt12"));
+        return driver.findElement(By.xpath("//div[@id='myNodePanel_SMF']//a[text()='Search']"));
     }
     public WebElement getSearchBar(){
         return driver.findElement(By.id("ctl00_ctl00_c_c_SearchBar_FTSSearchTextBox"));
@@ -84,6 +84,15 @@ public class TheLibraryView extends Driver{
     public WebElement getSearchResults (){
         return driver.findElement(By.id("ctl00_ctl00_c_c_SearchResultsLabel"));
     }
+    public WebElement getFileDate (){
+        return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/div[1]/div[1]/div/table[2]/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td[1]/div[1]/ul/li/ul/li[5]/a"));
+    }
+    public WebElement getWorkflowStatus (){
+        return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/div[1]/div[1]/div/table[2]/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td[1]/div[1]/ul/li/ul/li[6]/a"));
+    }
+    public WebElement getLibraryLocation (){
+        return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/div[1]/div[1]/div/table[2]/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td[1]/div[1]/ul/li/ul/li[6]/a"));
+    }
 //    public WebElement get (){
 //        return driver.findElement(By.id(""));
 //    }
@@ -93,16 +102,7 @@ public class TheLibraryView extends Driver{
 //    public WebElement get (){
 //        return driver.findElement(By.id(""));
 //    }
-//    public WebElement get (){
-//        return driver.findElement(By.id(""));
-//    }
-//    public WebElement get (){
-//        return driver.findElement(By.id(""));
-//    }
-//    public WebElement get (){
-//        return driver.findElement(By.id(""));
-//    }
-//
+
 
     public WebElement getLogoffButton(){
         return driver.findElement(By.id("ctl00_ctl00_LogOutButton"));

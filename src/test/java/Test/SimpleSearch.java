@@ -14,8 +14,8 @@ public class SimpleSearch {
         log.logoff();
     }
     public void execute() throws InterruptedException {
-//        simpleSearch(usersname.getUser00());
-//        simpleSearch(usersname.getUser01());
+        simpleSearch(usersname.getUser00());
+        simpleSearch(usersname.getUser01());
         simpleSearch(usersname.getUser02());
         simpleSearch(usersname.getUser03());
         simpleSearch(usersname.getUser04());
