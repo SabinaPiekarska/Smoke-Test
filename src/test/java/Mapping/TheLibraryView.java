@@ -6,6 +6,10 @@ import org.openqa.selenium.WebElement;
 
 public class TheLibraryView extends Driver{
 
+    public WebElement getMainPanel(){
+        return driver.findElement(By.id("ctl00_ctl00_c_c_MainPanel"));
+    }
+
     public WebElement getAdministration () {
         return driver.findElement(By.id("ctl00_ctl00_administrationMenu"));
     }

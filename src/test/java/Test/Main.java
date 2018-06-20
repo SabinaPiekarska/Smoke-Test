@@ -5,6 +5,7 @@ import BrowserFunctions.Driver;
 import Credentials.SearchQueries;
 import Credentials.Users;
 import Locations.FullAdminMenu;
+import Mapping.LogonPage;
 import Test.Library.CreateCabinet;
 import Test.Search.AdvancedSearch;
 import Test.Search.Search;
@@ -24,6 +25,7 @@ public class Main {
         System.setProperty("webdriver.gecko.driver", "C:\\\\geckodriver.exe");
         driver = new FirefoxDriver(capabilities);
         Logon logonpage = new Logon();
+        LogonPage logonMapping = new LogonPage();
         CreateCabinet cabcreate = new CreateCabinet();
 //        PasswordReset passrester = new PasswordReset();
         Users user = new Users();
@@ -36,7 +38,7 @@ public class Main {
         SimpleSearch simpleSearch = new SimpleSearch();
 
         driver.openTestingPage();
-        driver.waitUntilPageLoads(By.id("Login_UserName"));
+        driver.waitUntilPageLoads(logonMapping.getLogon());
 //        simpleSearch.execute();
 
         /*passrester.passwordReset();*/

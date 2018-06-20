@@ -13,7 +13,7 @@ public class FullAdminMenu extends Driver {
 /*
         action.contextClick(mapping.getAdministration()).perform();
 */
-        waitUntilPageLoads(By.id("ctl00_ctl00_administrationMenu"));
+        waitUntilPageLoads(mapping.getAdministration());
         action.moveToElement(mapping.getAdministration()).click().build().perform();
         mapping.getFullAdministrationMenu().click();
     }

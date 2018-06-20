@@ -4,24 +4,26 @@ import BrowserFunctions.Driver;
 import BrowserFunctions.Tools;
 import Credentials.SearchQueries;
 import Mapping.Search.SearchMapping;
+import Mapping.TheLibraryView;
 import org.openqa.selenium.By;
 
 public class Search extends Driver {
     SearchMapping searchMapping = new SearchMapping();
+    TheLibraryView mapping = new TheLibraryView();
     SearchQueries query = new SearchQueries();
     Tools tools = new Tools();
 
     public void search() throws InterruptedException {
-        waitUntilPageLoads(By.id("ctl00_ctl00_c_LibraryTree_lstt0"));
+        waitUntilPageLoads(mapping.getLibraryTreeList());
         searchMapping.getSearchFromSideMenu().click();
-        waitUntilPageLoads(By.id("ctl00_ctl00_c_c_SearchBar_FTSSearchTextBox"));
+        waitUntilPageLoads(searchMapping.getSearchBar());
     }
 
         public void simpleSearch(String searchConditions) throws InterruptedException {
         search();
         tools.clearSendKeys(searchMapping.getSearchBar(),searchConditions);
         searchMapping.getSearchButton().click();
-        waitUntilPageLoads(By.id("ctl00_ctl00_c_c_MainPanel"));
+        waitUntilPageLoads(mapping.getMainPanel());
         String result = searchMapping.getSearchResults().getText();
         if (result.equalsIgnoreCase("No Search Results"))
             System.out.println("no results ");
