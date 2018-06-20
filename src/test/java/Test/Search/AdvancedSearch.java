@@ -1,25 +1,30 @@
 package Test.Search;
 
 import BrowserFunctions.Driver;
+import Mapping.Search.SearchMapping;
 import Mapping.TheLibraryView;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 
 public class AdvancedSearch extends Driver {
-    TheLibraryView mapping = new TheLibraryView();
+    SearchMapping searchMapping = new SearchMapping();
     Search search = new Search();
     Actions action = new Actions(driver);
 
     public void getAdvancedSearchLink(){
-        mapping.getAdvancedLink().click();
+        searchMapping.getAdvancedLink().click();
     }
 
     public void advancedSearch() throws InterruptedException {
         search.search();
         getAdvancedSearchLink();
         waitUntilPageLoads(By.id("ctl00_ctl00_c_c_SearchBar_DataList_ctl00_ctrl_0_SAoF_cont_Text"));
-        action.moveToElement(mapping.getFileOrMetadata());
-//        action.moveToElement(mapping.getCheckOutStatus());
+//        action.moveToElement(searchMapping.getFileOrMetadata());
+//        searchMapping.getDrpDownMenuArrow().click();
+        action.moveToElement(searchMapping.getContainsInFTS());
+        action.moveToElement(searchMapping.getDoesNotContainInFTS());
+        action.click().build().perform();
+        //        action.moveToElement(mapping.getCheckOutStatus());
 //        action.click().build().perform();
 //        waitUntilPageLoads(By.id("ctl00_ctl00_c_c_SearchBar_DataList_ctl00_ctrl_0_COS_eq_SDDM_Arrow"));
 //        mapping.getDrpDownMenuArrow().click();
