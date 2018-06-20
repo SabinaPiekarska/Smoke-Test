@@ -1,6 +1,7 @@
 package Test.Search;
 
 import BrowserFunctions.Driver;
+import BrowserFunctions.Tools;
 import Credentials.SearchQueries;
 import Mapping.Search.SearchMapping;
 import org.openqa.selenium.By;
@@ -8,6 +9,7 @@ import org.openqa.selenium.By;
 public class Search extends Driver {
     SearchMapping searchMapping = new SearchMapping();
     SearchQueries query = new SearchQueries();
+    Tools tools = new Tools();
 
     public void search() throws InterruptedException {
         waitUntilPageLoads(By.id("ctl00_ctl00_c_LibraryTree_lstt0"));
@@ -15,10 +17,9 @@ public class Search extends Driver {
         waitUntilPageLoads(By.id("ctl00_ctl00_c_c_SearchBar_FTSSearchTextBox"));
     }
 
-    public void simpleSearch(String searchConditions) throws InterruptedException {
+        public void simpleSearch(String searchConditions) throws InterruptedException {
         search();
-        searchMapping.getSearchBar().clear();
-        searchMapping.getSearchBar().sendKeys(searchConditions);
+        tools.clearSendKeys(searchMapping.getSearchBar(),searchConditions);
         searchMapping.getSearchButton().click();
         waitUntilPageLoads(By.id("ctl00_ctl00_c_c_MainPanel"));
         String result = searchMapping.getSearchResults().getText();

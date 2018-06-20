@@ -15,6 +15,9 @@ public class TheLibraryView extends Driver{
     public WebElement getMenuOptions(){
         return driver.findElement(By.id("ctl00_ctl00_c_rpbMenu"));
     }
+    public WebElement getLibraryTreeList(){
+        return driver.findElement(By.id("ctl00_ctl00_c_LibraryTree_lstt25"));
+    }
     public WebElement getLibraryTree(){
         return driver.findElement(By.id("myNodePanel_LIB"));
     }
@@ -31,8 +34,11 @@ public class TheLibraryView extends Driver{
     public WebElement getNextButton(){
         return driver.findElement(By.id("ctl00_ctl00_c_c_CabinetWizard1_Wizard_StartNavigationTemplateContainerID_StartNextButton"));
     }
-    public WebElement getAddGroups(){
+    public WebElement getAddGroupsButton(){
         return driver.findElement(By.id("ctl00_ctl00_c_c_CabinetWizard1_Wizard_ManageMembershipControl_AddGroupsButton"));
+    }
+    public WebElement getUsersList(){
+        return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr[1]/td/div/table/tbody/tr/td/table/tbody/tr[2]/td[3]/div[1]/select/option[1]"));
     }
     public WebElement getSaveButton(){
         return driver.findElement(By.id("ctl00_ctl00_c_c_CabinetWizard1_Wizard_StepNavigationTemplateContainerID_StartFinishButton"));

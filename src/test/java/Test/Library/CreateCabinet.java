@@ -18,19 +18,19 @@ public class CreateCabinet extends Driver {
         JavascriptExecutor js = (JavascriptExecutor)driver;
         Actions action = new Actions(driver);
 
-        waitUntilPageLoads(By.id("ctl00_ctl00_c_LibraryTree_lstt25"));
+        waitUntilPageLoads(mapping.getLibraryTreeList());
         js.executeScript("\"javascript:TreeView_ToggleNode(ctl00_ctl00_c_LibraryTree_lst_Data,25,document.getElementById('ctl00_ctl00_c_LibraryTree_lstn25'),' ',document.getElementById('ctl00_ctl00_c_LibraryTree_lstn25Nodes'))\"");
         action.contextClick(mapping.getLibraryTree()).perform();
         mapping.getAddCabinet().click();
-        waitUntilPageLoads(By.id("ctl00_ctl00_c_c_CabinetWizard1_Wizard_CabinetNameTextBox"));
+        waitUntilPageLoads(mapping.getCabinetName());
         mapping.getCabinetName().sendKeys("Cab " + user.getSysadm());
         mapping.getSchemaList().click();
         generator.randomDropdownClick(mapping.getSchemaList());
         mapping.getNextButton().click();
-        waitUntilPageLoads(By.id("ctl00_ctl00_c_c_CabinetWizard1_Wizard_ManageMembershipControl_AddGroupsButton"));
-        mapping.getAddGroups().click();
+        waitUntilPageLoads(mapping.getAddGroupsButton());
+        mapping.getAddGroupsButton().click();
         while(mapping.getCurrentMembersOfCabinet().getAttribute("value") == null){
-            waitUntilPageLoads(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div[1]/table/tbody/tr/td[2]/div/div[1]/table/tbody/tr/td[2]/table/tbody/tr[1]/td/div/table/tbody/tr/td/table/tbody/tr[2]/td[3]/div[1]/select/option[1]"));
+            waitUntilPageLoads(mapping.getUsersList());
         }
         mapping.getSaveButton().click();
         quitDriver();

@@ -1,6 +1,5 @@
 package Locations;
 
-import Mapping.FullAdministrationMenu;
 import Mapping.TheLibraryView;
 import BrowserFunctions.Driver;
 import org.openqa.selenium.By;

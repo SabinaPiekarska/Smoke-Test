@@ -2,7 +2,6 @@ package Test.Search;
 
 import BrowserFunctions.Driver;
 import Mapping.Search.SearchMapping;
-import Mapping.TheLibraryView;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 
@@ -18,7 +17,7 @@ public class AdvancedSearch extends Driver {
     public void advancedSearch() throws InterruptedException {
         search.search();
         getAdvancedSearchLink();
-        waitUntilPageLoads(By.id("ctl00_ctl00_c_c_SearchBar_DataList_ctl00_ctrl_0_SAoF_cont_Text"));
+        waitUntilPageLoads(searchMapping.getFileOrMetadata());
 //        action.moveToElement(searchMapping.getFileOrMetadata());
 //        searchMapping.getDrpDownMenuArrow().click();
         action.moveToElement(searchMapping.getContainsInFTS());
