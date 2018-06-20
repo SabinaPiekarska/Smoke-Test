@@ -3,8 +3,10 @@ package Test.Search;
 import BrowserFunctions.Driver;
 import BrowserFunctions.Tools;
 import Credentials.SearchQueries;
+import Credentials.Users;
 import Mapping.Search.SearchMapping;
 import Mapping.TheLibraryView;
+import Test.Logon;
 import org.openqa.selenium.By;
 
 public class Search extends Driver {
@@ -13,13 +15,21 @@ public class Search extends Driver {
     SearchQueries query = new SearchQueries();
     Tools tools = new Tools();
 
+    Logon log = new Logon();
+
+    public void searchUsefulElements(String userLogin) throws InterruptedException {
+        log.Logon(userLogin);
+        searchOperator();
+        log.logoff();
+    }
+
     public void search() throws InterruptedException {
         waitUntilPageLoads(mapping.getLibraryTreeList());
         searchMapping.getSearchFromSideMenu().click();
         waitUntilPageLoads(searchMapping.getSearchBar());
     }
 
-        public void simpleSearch(String searchConditions) throws InterruptedException {
+    public void simpleSearch(String searchConditions) throws InterruptedException {
         search();
         tools.clearSendKeys(searchMapping.getSearchBar(),searchConditions);
         searchMapping.getSearchButton().click();
@@ -32,7 +42,7 @@ public class Search extends Driver {
 
     }
 
-        public void searchOperator() throws InterruptedException {
+    public void searchOperator() throws InterruptedException {
 
         simpleSearch(query.getAndOperator());
 
