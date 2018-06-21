@@ -1,7 +1,6 @@
 package Test.Search;
 
 import Credentials.Users;
-import Test.Search.Search;
 import org.testng.annotations.Test;
 
 public class ElementsUsefulForSearch {

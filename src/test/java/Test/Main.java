@@ -1,3 +1,4 @@
+/*
 package Test;
 
 
@@ -41,7 +42,9 @@ public class Main {
         driver.waitUntilPageLoads(logonMapping.getLogon());
 //        simpleSearch.execute();
 
-        /*passrester.passwordReset();*/
+        */
+/*passrester.passwordReset();*//*
+
         logonpage.Logon(user.getSysadm());
         advancedSearch.advancedSearch();
 //        logonpage.logoff();
@@ -54,8 +57,10 @@ public class Main {
 
 
 //        cabcreate.createACabinet();
-      /*  driver.waitUntilPageLoads(By.xpath("/html/body/form/div[3]/table/tbody/tr[1]/td/div/table/tbody/tr/td[2]/div/span"));
+      */
+/*  driver.waitUntilPageLoads(By.xpath("/html/body/form/div[3]/table/tbody/tr[1]/td/div/table/tbody/tr/td[2]/div/span"));
         fulladmmenu.getAdminMenu();
-        fulladmmenu.SystemManagement();*/
+        fulladmmenu.SystemManagement();*//*
+
     }
-}
+}*/
