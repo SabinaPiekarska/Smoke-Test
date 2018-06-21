@@ -14,6 +14,7 @@ public class Search extends Driver {
     TheLibraryView mapping = new TheLibraryView();
     SearchQueries query = new SearchQueries();
     Tools tools = new Tools();
+    Logon logon = new Logon();
 
     Logon log = new Logon();
 
@@ -61,6 +62,11 @@ public class Search extends Driver {
         simpleSearch(query.getwAndAsteriskOperator());
 
         simpleSearch(query.getAmpersandOperator());
+    }
+    public void simpleSearchOperators(String userName) throws InterruptedException {
+        logon.Logon(userName);
+        searchOperator();
+        logon.logoff();
     }
 
 }
