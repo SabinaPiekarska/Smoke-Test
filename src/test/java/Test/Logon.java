@@ -21,7 +21,6 @@ public class Logon extends Driver {
         waitUntilPageLoads(logonMapping.getLogon());
     }
     public void Logon(String userName) throws InterruptedException {
-        openTestingPage();
         tools.clearSendKeys(logonMapping.getLogon(), userName);
         tools.clearSendKeys(logonMapping.getPassword(), user.getPassword());
         logonMapping.getLogonButton().click();
