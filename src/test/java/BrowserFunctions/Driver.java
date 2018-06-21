@@ -15,8 +15,6 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
     public static WebDriver driver;
-    LogonPage logonMapping = new LogonPage();
-    private String basicURL = "http://fhw2016-1/FH/FileHold/WebClient/LoginForm.aspx";
 
     @BeforeSuite
     //   Method that creates new Firefox driver and maximize browser window
@@ -35,11 +33,7 @@ public class Driver {
         wait.until(ExpectedConditions.elementToBeClickable(load));
     }
 
-    //     Method that opens registration page
-    public void openTestingPage () throws InterruptedException {
-        driver.get(basicURL);
-        waitUntilPageLoads(logonMapping.getLogon());
-    }
+
 
     public void quitDriver() {
         driver.quit();
