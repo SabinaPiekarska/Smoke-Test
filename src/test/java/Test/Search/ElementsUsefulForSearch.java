@@ -12,7 +12,7 @@ public class ElementsUsefulForSearch {
 
     @Test
     public void elementsUsefulForSearch() throws InterruptedException {
-//        logon.createDriver();
+        logon.createDriver();
         logon.openTestingPage();
         search.searchUsefulElements(usersName.getUser00());
         search.searchUsefulElements(usersName.getUser01());

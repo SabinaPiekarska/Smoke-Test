@@ -7,13 +7,13 @@ import org.openqa.selenium.WebElement;
 public class FullAdministrationMenu extends Driver {
 
     public WebElement getSystemManagement(){
-        return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div/table/tbody/tr/td[1]/div/ul/li[4]/a/span/span[2]"));
+        return driver.findElement(By.xpath("//div[@id='ctl00_ctl00_c_rpbMenu']//span[text()='System management']"));
     }
     public WebElement getUserManagement(){
-        return driver.findElement(By.xpath("/html/body/form/div[3]/table/tbody/tr[2]/td/div/div/table/tbody/tr/td[1]/div/ul/li[4]/div/ul/li[1]/div/ul/li[1]/a/span/span[2]"));
+        return driver.findElement(By.xpath("//div[@id='ctl00_ctl00_c_rpbMenu']//span[text()='User Management']"));
     }
     public WebElement getUsers(){
-        return driver.findElement(By.partialLinkText("UsersForm"));
+        return driver.findElement(By.xpath("//div[@id='ctl00_ctl00_c_rpbMenu']//span[text()='UsersForm']"));
     }
 
 }

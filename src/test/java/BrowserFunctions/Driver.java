@@ -15,10 +15,9 @@ import org.testng.annotations.*;
 import java.util.concurrent.TimeUnit;
 
 public class Driver {
-    public static WebDriver driver;
 
     @BeforeSuite
-    //   Method that creates new Firefox driver and maximize browser window
+    //   Method that creates new Firefox driver and maximize browser win    public static WebDriver driver;dow
     public void createDriver() {
         System.setProperty("webdriver.gecko.driver", "C:\\\\geckodriver.exe");
         FirefoxOptions firefoxOptions = new FirefoxOptions();

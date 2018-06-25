@@ -9,5 +9,8 @@
         <module name="SmokeTests" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SmokeTests" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
